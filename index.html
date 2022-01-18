@@ -187,6 +187,7 @@
             let y = date.getUTCFullYear();
             let m = date.getUTCMonth();
             let d = date.getUTCDay();
+            console.log(y, m, d)
             let rowWords = [false, false, false, false, false];
             let colWords = [false, false, false, false, false];
             let score = 0;
@@ -198,7 +199,9 @@
             
             if (param !== "yes") {
                 seed = new Date(y, m, d + 2).getTime()
+                console.log(seed)
                 seed = parseInt(seed / 10000000);
+                console.log(seed)
                 seed = seed.toString();
             } else {
                 seed = Math.random();
@@ -371,6 +374,7 @@
                 document.getElementById("sharestring").innerHTML = shareString;
             }
             
+            //init
             roll();
             genKeyboard();
             tryGuess();
